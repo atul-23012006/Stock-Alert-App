@@ -2,7 +2,7 @@
 
 A Python application that monitors stock price changes and sends SMS alerts when significant movements occur.
 
-This project checks the stock price difference between the last two trading days. If the price change exceeds a defined threshold, it fetches related news articles and sends them as SMS alerts.
+The app checks the stock price difference between the last two trading days. If the price change exceeds a defined threshold, it fetches related news articles and sends them as SMS alerts. The project also includes a simple web interface to trigger or view the alert system.
 
 ---
 
@@ -12,6 +12,7 @@ This project checks the stock price difference between the last two trading days
 * Calculate percentage change in stock price
 * Retrieve latest related news articles
 * Send SMS notifications using Twilio
+* Simple web interface using HTML templates
 * Store API keys securely using environment variables
 
 ---
@@ -19,11 +20,13 @@ This project checks the stock price difference between the last two trading days
 ## 🛠️ Technologies Used
 
 * Python
+* Flask
 * Requests
 * Twilio API
 * News API
 * Alpha Vantage API
 * python-dotenv
+* HTML
 
 ---
 
@@ -35,7 +38,10 @@ Stock-Alert-App
 ├── requirements.txt
 ├── .env
 ├── .gitignore
-└── README.md
+├── README.md
+│
+├── templates
+│   └── index.html
 
 ---
 
@@ -79,6 +85,7 @@ python main.py
 2. Calculate percentage change between yesterday and the previous trading day.
 3. If the change exceeds the threshold (e.g., 5%), fetch related news articles.
 4. Send the top news headlines via SMS using Twilio.
+5. The web interface allows interaction with the application through a browser.
 
 ---
 
@@ -92,8 +99,8 @@ Sensitive information such as API keys and credentials are stored in a `.env` fi
 
 * Support monitoring multiple stocks
 * Email notifications
-* Web dashboard for tracking stocks
-* Automated scheduled checks
+* Improved web dashboard
+* Scheduled automatic monitoring
 
 ---
 
